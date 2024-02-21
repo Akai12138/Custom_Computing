@@ -1,28 +1,7 @@
-
-# There are many examples in this file. To test eg3 for instance,
-# follow these steps:
-#
-# (1) Save this message in a file called egs.rby. Delete everything
-#     above the line 'INCLUDE "prelude.rby".'
-# (2) Redefine the variable 'current' at the end of the file to
-#     be 'eg3'.
-# (3) Exit the editor and type 'rc egs.rby' to compile the file.
-#     This produces the file 'current.rbs'.
-# (4) Have a look at the compiled file 'current.rbs' if you wish,
-#     but you don't have to.
-# (5) Provide test data to the evaluator by typing the line
-#     below the definition of eg3: 're "2;3;x"'.
-#     You should see the same simulation result as that below
-#     the simulation command 're "2;3;x"'.
-#
-# I assume that your current directory contains the 'prelude.rby' file.
-#
-# Have fun,
-# Wayne  
-
 INCLUDE "prelude.rby".
 
 #################
-Q1 = fork.
+Q1 = snd fork ; rsh ; [add,D^~1].
+P1 = Q1^4 ; fork^~1.
 
-current = Q1.
+current = P1.
